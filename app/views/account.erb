@@ -9,8 +9,8 @@
   
   <h1>Account Page</h1>
   <% if Helpers.is_logged_in?(session) %>
-    <h3>Welcome <%=Helpers.current_user.username%></h3>
-    <h3>Balance: <%=Helpers.current_user.balance.to_i%></h3>
+    <h3>Welcome <%=Helpers.current_user(session).username%></h3>
+    <h3>Balance: <%=Helpers.current_user(session).balance.to_i%></h3>
   <% end %>
   
   <!--<p><a href='/logout'>Log Out</a></p>-->
